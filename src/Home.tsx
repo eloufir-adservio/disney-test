@@ -3,6 +3,7 @@ import {useAppSelector} from './app/hooks';
 import {selectStep, selectSteps} from './features/booking/bookingSlice';
 import SearchPanel from './features/booking/SearchPanel/SearchPanel';
 import HotelResult from './features/booking/HotelsResult/HotelResult';
+import RoomSelection from './features/booking/RoomSelection/RoomSelection';
 
 const Home = () => {
     const step = useAppSelector(selectStep);
@@ -11,6 +12,7 @@ const Home = () => {
         <Wizard items={steps} active={step}/>
         {step < 2 && <SearchPanel/>}
         {step === 0 && <HotelResult/>}
+        {step === 1 && <RoomSelection/>}
     </div>
 }
 
