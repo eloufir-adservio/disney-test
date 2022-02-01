@@ -5,6 +5,7 @@ import SearchPanel from './features/booking/SearchPanel/SearchPanel';
 import HotelResult from './features/booking/HotelsResult/HotelResult';
 import RoomSelection from './features/booking/RoomSelection/RoomSelection';
 import Recap from './features/booking/Recap/Recap';
+import Confirmation from './features/booking/Confirmation/Confirmation';
 
 const Home = () => {
     const step = useAppSelector(selectStep);
@@ -15,6 +16,7 @@ const Home = () => {
         {step === 0 && <HotelResult/>}
         {step === 1 && <RoomSelection/>}
         {step === 2 && <Recap/>}
+        {step === 3 && <Confirmation/>}
     </div>
 }
 
